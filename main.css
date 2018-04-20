@@ -1,0 +1,175 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: antiquewhite;
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* NAVIGACIA */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslateblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: black;
+}
+
+.active {
+    background-color: red;
+}
+
+section {
+    margin-top: 47.33px;
+}
+
+/* TIMELINE */
+
+/* pravitko */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* pravitko */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* kontajner okolo obsahu */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* kruhy */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -9px;
+    background-color: red;
+    border: 4px solid red;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* kontajner vlavo */
+.left {
+    left: 0;
+}
+
+/* kontajner vpravo */
+.right {
+    left: 50%;
+    margin-top: -150px
+}
+
+/* sipky vlavo */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 19px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 15px 0 15px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* sipky vpravo */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 19px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 15px 10px 15px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* kruhy vpravo */
+.right::after {
+    left: -9px;
+}
+
+/* obsah */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  /* timeline vlavo */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* sirka kontajnerov */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* sipky smerom dolava */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 15px 10px 15px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* kruhy */
+  .left::after, .right::after {
+    left: 22px;
+  }
+
+  /* kontajnery z prava */
+  .right {
+    left: 0%;
+    margin: auto;
+  }
+}

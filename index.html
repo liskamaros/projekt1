@@ -4,28 +4,30 @@
 <head>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <div>
-        <ul>
+
+        <ul class="topnav" id="myTopnav">
             <li><a class="active" href="#predstavenie">Predstavenie</a></li>
-            <li><a href="#zrucnosti">Zručnosti</a></li>
-            <li><a href="#skusenosti">Skúsenosti</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#zrucnosti" onclick="hideNav()">Zručnosti</a></li>
+            <li><a href="#skusenosti" onclick="hideNav()">Skúsenosti</a></li>
+            <li><a href="#portfolio" onclick="hideNav()">Portfólio</a></li>
+            <li><a href="#kontakt" onclick="hideNav()">Kontakt</a></li>
+            <li class="menu-icon"><a href="javascript:void(0);" style="font-size:15px;"  onclick="displayNav()">menu</a></li>
         </ul>
-    </div>
+
+
     <section id="predstavenie">
         <div>
-            <h1>Predstavenie
-            </h1>
+            <h1>Predstavenie</h1>
         </div>
     </section>
+
     <section id="zrucnosti">
         <div>
-            <h1>Zručnosti
-            </h1>
+            <h1>Zručnosti</h1>
         </div>
     </section>
 
@@ -40,13 +42,16 @@
             <div class="container right">
                 <div class="content">
                     <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
+                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
                     <h2>2014</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
+                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
+                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
                 </div>
             </div>
             <div class="container right">
@@ -61,7 +66,7 @@
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
                 </div>
             </div>
-            <div class="container right">
+            <div class="container right last">
                 <div class="content">
                     <h2>2008</h2>
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
@@ -72,16 +77,36 @@
 
     <section id="portfolio">
         <div>
-            <h1>Portfólio
-            </h1>
+            <h1>Portfólio</h1>
         </div>
     </section>
+
     <section id="kontakt">
         <div>
-            <h1>Kontakt
-            </h1>
+            <h1>Kontakt</h1>
         </div>
     </section>
+
+<script>
+function displayNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+    function hideNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "responsive") {
+        x.className === "topnav";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
 </body>
 
 </html>

@@ -43,18 +43,18 @@ body {
   .topnav li:not(:first-child) {
     display: none;
   }
-  .menu-icon {
-    display: block!important;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
   .topnav.responsive li {
     display: block!important;
     color: white;
     text-align: center;
     float: none;
     text-decoration: none;
+  }
+  .menu-icon {
+    display: block!important;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 section {
@@ -66,8 +66,8 @@ section {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  /* ciara */
 }
-/* ciara */
 .timeline::after {
   content: '';
   position: absolute;
@@ -86,17 +86,13 @@ section {
   position: relative;
   background-color: inherit;
   width: 50%;
+  /* kontajner vlavo */
+  /* bodky */
+  /* obsah */
 }
-/* kontajner vlavo */
-.left {
+.container .left {
   left: 0;
 }
-/* kontajner vpravo */
-.right {
-  left: 50%;
-  margin-top: -190px;
-}
-/* bodky */
 .container::after {
   content: '';
   position: absolute;
@@ -108,6 +104,16 @@ section {
   top: 29px;
   border-radius: 50%;
   z-index: 1;
+}
+.container .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+}
+/* kontajner vpravo */
+.right {
+  left: 50%;
+  margin-top: -190px;
 }
 /* sipky */
 .left::before,
@@ -135,12 +141,6 @@ section {
 /* kruhy vpravo */
 .right::after {
   left: -5.3px;
-}
-/* obsah */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
 }
 /* Media queries */
 @media screen and (max-width: 600px) {

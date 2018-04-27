@@ -42,43 +42,26 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 600px) {
-    .topnav li:not(:first-child) {
-        display: none;
-
+    .topnav {
+        li:not(:first-child) {
+            display: none;
+        }
+        &.responsive li {
+            display: block!important;
+            color: white;
+            text-align: center;
+            float: none;
+            text-decoration: none;
+        }
     }
     .menu-icon {
         display: block!important;
         position: absolute;
         right: 0;
         top: 0;
-
-    }
-    .topnav.responsive li {
-        display: block!important;
-        color: white;
-        text-align: center;
-        float: none;
-        text-decoration: none;
     }
 }
-
-
-
-
-
-
 
 section {
     margin-top: 47.33px;
@@ -92,21 +75,19 @@ section {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-/* ciara */
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #ff000026;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    margin-top: 30px;
-    margin-bottom: 170px;
+    /* ciara */
+    &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #ff000026;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        margin-top: 30px;
+        margin-bottom: 170px;
+    }
 }
 
 /* kontajner okolo obsahu */
@@ -116,12 +97,29 @@ section {
     position: relative;
     background-color: inherit;
     width: 50%;
-}
-
-/* kontajner vlavo */
-
-.left {
-    left: 0;
+    /* kontajner vlavo */
+    .left {
+        left: 0;
+    }
+    /* bodky */
+    &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        right: -5.7px;
+        background-color: red;
+        border: 3px solid red;
+        top: 29px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    /* obsah */
+    .content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+    }
 }
 
 /* kontajner vpravo */
@@ -129,21 +127,6 @@ section {
 .right {
     left: 50%;
     margin-top: -190px;
-}
-
-/* bodky */
-
-.container::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    right: -5.7px;
-    background-color: red;
-    border: 3px solid red;
-    top: 29px;
-    border-radius: 50%;
-    z-index: 1;
 }
 
 /* sipky */
@@ -165,7 +148,6 @@ section {
     border-width: 15px 0 15px 10px;
     border-color: transparent transparent transparent white;
     right: 30px;
-
 }
 
 /* sipky vpravo */
@@ -180,14 +162,6 @@ section {
 
 .right::after {
     left: -5.3px;
-}
-
-/* obsah */
-
-.content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
 }
 
 /* Media queries */

@@ -4,7 +4,7 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: antiquewhite;
+  background-color: #EFEFEE;
   margin: 0;
 }
 /* NAVIGACIA */
@@ -92,9 +92,29 @@ section {
   background-color: white;
   padding: 10px;
 }
+.flexcontainer1 .omne {
+  margin-top: 50px;
+  margin-left: 40px;
+}
 .flexcontainer1 .omne img {
   width: 100%;
   max-width: 350px;
+}
+.flexcontainer1 .omne h4 {
+  border-bottom: solid black;
+  padding-bottom: 20px;
+}
+.flexcontainer1 .omne ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.flexcontainer1 .omne ul li strong {
+  display: inline-block;
+  width: 150px;
+}
+.flexcontainer1 .omne ul li span {
+  display: inline-block;
+  width: 280px;
 }
 @media (max-width: 600px) {
   #predstavenie {

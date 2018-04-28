@@ -58,7 +58,53 @@ body {
   }
 }
 section {
-  margin-top: 47.33px;
+  margin-top: 50px;
+}
+/* POZADIE */
+.pozadie {
+  width: 100%;
+  height: 515px;
+  background-image: url(earth.jpg);
+  background-size: cover;
+}
+.pozadie::before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 515px;
+  position: absolute;
+  background-color: rgba(44, 51, 64, 0.8);
+  z-index: 0;
+}
+/* PREDSTAVENIE */
+#predstavenie {
+  margin: 40px;
+  margin-top: -330px;
+  position: relative;
+}
+.flexcontainer1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 925px;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+  padding: 10px;
+}
+.flexcontainer1 .omne img {
+  width: 100%;
+  max-width: 350px;
+}
+@media (max-width: 600px) {
+  #predstavenie {
+    margin: 10px;
+    margin-top: -410px;
+  }
+  /*.omne {
+        flex: 100%;
+        width: 100%;
+    }*/
 }
 /* TIMELINE */
 /* pravitko */
@@ -146,17 +192,17 @@ section {
 @media screen and (max-width: 600px) {
   /* timeline vlavo */
   .timeline::after {
-    left: 31px;
+    left: 15px;
   }
   /* sirka kontajnerov */
   .container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 35px;
+    padding-right: 10px;
   }
   /* sipky smerom dolava */
   .container::before {
-    left: 60px;
+    left: 25px;
     border: medium solid white;
     border-width: 15px 10px 15px 0;
     border-color: transparent white transparent transparent;
@@ -164,7 +210,7 @@ section {
   /* kruhy */
   .left::after,
   .right::after {
-    left: 25px;
+    left: 9.5px;
   }
   /* kontajnery z prava */
   .right {

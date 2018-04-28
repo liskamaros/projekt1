@@ -9,19 +9,25 @@
 
 <body>
 
-        <ul class="topnav" id="myTopnav">
-            <li><a class="active" href="#predstavenie">Predstavenie</a></li>
-            <li><a href="#zrucnosti" onclick="hideNav()">Zručnosti</a></li>
-            <li><a href="#skusenosti" onclick="hideNav()">Skúsenosti</a></li>
-            <li><a href="#portfolio" onclick="hideNav()">Portfólio</a></li>
-            <li><a href="#kontakt" onclick="hideNav()">Kontakt</a></li>
-            <li class="menu-icon"><a href="javascript:void(0);" style="font-size:15px;"  onclick="displayNav()">menu</a></li>
-        </ul>
+    <ul class="topnav" id="myTopnav">
+        <li><a class="active" href="#predstavenie">Predstavenie</a></li>
+        <li><a href="#zrucnosti" onclick="hideNav()">Zručnosti</a></li>
+        <li><a href="#skusenosti" onclick="hideNav()">Skúsenosti</a></li>
+        <li><a href="#portfolio" onclick="hideNav()">Portfólio</a></li>
+        <li><a href="#kontakt" onclick="hideNav()">Kontakt</a></li>
+        <li class="menu-icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="displayNav()">menu</a></li>
+    </ul>
 
+    <div class="pozadie"></div>
 
     <section id="predstavenie">
-        <div>
-            <h1>Predstavenie</h1>
+        <div class="flexcontainer1">
+            <div class="omne fotka">
+                <img src="fox2.jpg">
+            </div>
+            <div class="omne">
+                <h1>Moje meno je Maroš Liška</h1>
+            </div>
         </div>
     </section>
 
@@ -42,16 +48,13 @@
             <div class="container right">
                 <div class="content">
                     <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
-                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
                     <h2>2014</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
-                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum
-                    Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum</p>
                 </div>
             </div>
             <div class="container right">
@@ -87,25 +90,25 @@
         </div>
     </section>
 
-<script>
-function displayNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+    <script>
+        function displayNav() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
 
-    function hideNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "responsive") {
-        x.className === "topnav";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+        function hideNav() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "responsive") {
+                x.className === "topnav";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 
 </body>
 

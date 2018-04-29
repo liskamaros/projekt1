@@ -83,43 +83,74 @@ section {
   margin-top: -330px;
   position: relative;
 }
-.flexcontainer1 {
+#predstavenie .socsiete {
+  display: flex;
+  margin: auto;
+  max-width: 925px;
+  line-height: 70px;
+  justify-content: center;
+  background-color: #e8676b;
+  border: 0;
+}
+#predstavenie .socsiete .social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#predstavenie .socsiete .social li {
+  display: inline-block;
+  margin: 5px 25px;
+}
+#predstavenie .socsiete .social li .fa {
+  color: white;
+}
+#predstavenie .flexcontainer1 {
   display: flex;
   flex-wrap: wrap;
   max-width: 925px;
   justify-content: center;
   margin: auto;
   background-color: white;
-  padding: 10px;
+  padding: 60px 50px 50px;
 }
-.flexcontainer1 .omne {
-  margin-top: 50px;
-  margin-left: 40px;
+#predstavenie .flexcontainer1 .fotka {
+  padding-right: 60px;
+  margin-right: ;
 }
-.flexcontainer1 .omne img {
+#predstavenie .flexcontainer1 .omne img {
   width: 100%;
   max-width: 350px;
 }
-.flexcontainer1 .omne h4 {
+#predstavenie .flexcontainer1 .omne h4 {
   border-bottom: solid black;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
-.flexcontainer1 .omne ul {
+#predstavenie .flexcontainer1 .omne ul {
   list-style-type: none;
   padding-left: 0;
 }
-.flexcontainer1 .omne ul li strong {
+#predstavenie .flexcontainer1 .omne ul li strong {
   display: inline-block;
   width: 150px;
+  margin-bottom: 20px;
 }
-.flexcontainer1 .omne ul li span {
+#predstavenie .flexcontainer1 .omne ul li span {
   display: inline-block;
-  width: 280px;
+  width: 260px;
+  margin-bottom: 20px;
 }
 @media (max-width: 600px) {
   #predstavenie {
     margin: 10px;
     margin-top: -410px;
+  }
+  .flexcontainer1 .fotka {
+    padding-right: 0px;
+  }
+  .flexcontainer1 .omne ul li strong {
+    margin-bottom: 0;
   }
   /*.omne {
         flex: 100%;

@@ -95,55 +95,85 @@ section {
     margin: 40px;
     margin-top: -330px;
     position: relative;
-}
-
-.flexcontainer1 {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 925px;
-    justify-content: center;
-    margin: auto;
-    background-color: white;
-    padding: 10px;
-    .omne {
-        margin-top: 50px;
-        margin-left: 40px;
-    }
-    .fotka {
-
-
-    }
-
-    .omne img {
-        width: 100%;
-        max-width: 350px;
-    }
-    .omne h4 {
-        border-bottom: solid black;
-        padding-bottom: 20px;
-    }
-    .omne ul {
-        list-style-type: none;
-        padding-left: 0;
-        li {
-            strong {
+    .socsiete {
+        display: flex;
+        margin: auto;
+        max-width: 925px;
+        line-height: 70px;
+        justify-content: center;
+        background-color: #e8676b;
+        border: 0;
+        .social {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
                 display: inline-block;
-                width: 150px;
-            }
-            span {
-                display: inline-block;
-                width: 280px;
-
+                margin: 5px 25px;
+                .fa{
+                    color: white;
+                }
             }
         }
     }
+    .flexcontainer1 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 925px;
+        justify-content: center;
+        margin: auto;
+        background-color: white;
+        padding: 60px 50px 50px;
+        .omne {}
+        .fotka {
+            padding-right: 60px;
+            margin-right: ;
+        }
 
+        .omne img {
+            width: 100%;
+            max-width: 350px;
+        }
+        .omne h4 {
+            border-bottom: solid black;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .omne ul {
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                strong {
+                    display: inline-block;
+                    width: 150px;
+                    margin-bottom: 20px;
+                }
+                span {
+                    display: inline-block;
+                    width: 260px;
+                    margin-bottom: 20px;
+
+                }
+            }
+        }
+
+    }
 }
 
 @media (max-width: 600px) {
     #predstavenie {
         margin: 10px;
         margin-top: -410px;
+    }
+    .flexcontainer1 {
+        .fotka {
+            padding-right: 0px;
+        }
+        .omne ul li strong {
+            margin-bottom: 0;
+        }
+
     }
     /*.omne {
         flex: 100%;

@@ -111,7 +111,7 @@ section {
             li {
                 display: inline-block;
                 margin: 5px 25px;
-                .fa{
+                .fa {
                     color: white;
                 }
             }
@@ -124,11 +124,14 @@ section {
         justify-content: center;
         margin: auto;
         background-color: white;
-        padding: 60px 50px 50px;
-        .omne {}
+        padding: 60px 40px 50px;
+        .omne {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
         .fotka {
-            padding-right: 60px;
-            margin-right: ;
+            width: 300px;
+
         }
 
         .omne img {
@@ -147,11 +150,11 @@ section {
                 strong {
                     display: inline-block;
                     width: 150px;
-                    margin-bottom: 20px;
+
                 }
                 span {
                     display: inline-block;
-                    width: 260px;
+                    width: 170px;
                     margin-bottom: 20px;
 
                 }
@@ -309,5 +312,87 @@ section {
     .right {
         left: 0%;
         margin: auto;
+    }
+}
+
+/* KONTAKT */
+
+#kontakt {
+    margin: 30px;
+
+    .kontaktcontainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: auto;
+        max-width: 945px;
+        justify-content: space-between;
+
+        .kformular {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            flex-grow: 1;
+            margin: 0 10px;
+
+            h3 {
+                margin-top: auto;
+            }
+            form {
+                input {
+                    border: none;
+                    width: 100%;
+                    font-size: 16px;
+                }
+                textarea {
+                    border: none;
+                    resize: none;
+                    width: 100%;
+                    font-size: 16px;
+                }
+                .input-field {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 5px;
+                    padding-top: 15px;
+                }
+                .tsubmit {
+
+                    .tlacitkosubmit {
+                        background-color: #e8676b;
+                        margin-top: 15px;
+                        width: 150px;
+                        padding: 15px;
+                        color: white;
+
+                    }
+                }
+            }
+        }
+        .kontakty {
+            width: 300px;
+            background-color: white;
+            flex-grow: 1;
+            padding: 20px;
+            margin: 0 10px;
+
+
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                li {
+                    strong {
+                        display: inline-block;
+                        width: 120px;
+                    }
+                    span {
+                        display: inline-block;
+                        width: auto;
+                        margin-bottom: 20px;
+
+                    }
+                }
+            }
+        }
     }
 }

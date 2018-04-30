@@ -171,7 +171,7 @@ section {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #ff000026;
+  background-color: #e8676b26;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -198,8 +198,8 @@ section {
   width: 5px;
   height: 5px;
   right: -5.7px;
-  background-color: red;
-  border: 3px solid red;
+  background-color: #e8676b;
+  border: 3px solid #e8676b;
   top: 29px;
   border-radius: 50%;
   z-index: 1;
@@ -284,7 +284,7 @@ section {
 }
 #kontakt .kontaktcontainer .kformular {
   background-color: white;
-  padding: 20px;
+  padding: 30px;
   width: 300px;
   flex-grow: 1;
   margin: 0 10px;
@@ -319,10 +319,16 @@ section {
   width: 300px;
   background-color: white;
   flex-grow: 1;
-  padding: 20px;
+  padding: 30px;
   margin: 0 10px;
 }
+#kontakt .kontaktcontainer .kontakty #map {
+  height: 300px;
+  margin: -30px;
+}
 #kontakt .kontaktcontainer .kontakty ul {
+  margin-top: 0;
+  margin-bottom: 30px;
   list-style-type: none;
   padding-left: 0;
 }

@@ -143,19 +143,19 @@
                 <h3>Kontaktný formulár</h3>
                 <form class="contactForm" action="#" method="post">
                     <div class="input-field">
-                        <input class="contact-name" type="text" name="name" placeholder="Meno">
+                        <input class="contact-name" type="text" name="name" placeholder="MENO">
                     </div>
                     <div class="input-field">
-                        <input class="contact-email" type="email" name="email" placeholder="Email">
+                        <input class="contact-email" type="email" name="email" placeholder="EMAIL">
                     </div>
                     <div class="input-field">
-                        <input class="contact-subject" type="text" name="subject" placeholder="Predmet">
+                        <input class="contact-subject" type="text" name="subject" placeholder="PREDMET">
                     </div>
                     <div class="input-field">
-                        <textarea class="contact-message" rows="3" name="message" placeholder="Správa"></textarea>
+                        <textarea class="contact-message" rows="3" name="message" placeholder="SPRÁVA"></textarea>
                     </div>
                     <span class="tsubmit">
-					<input class="tlacitkosubmit" type="submit" value="Odoslať">
+					<input class="tlacitkosubmit" type="submit" value="ODOSLAŤ">
 				</span>
                     <div class="contact-response">
                     </div>
@@ -175,7 +175,14 @@
                         <strong>ADRESA</strong>
                         <span>Bratislava</span>
                     </li>
+                    <li>
+                        <strong>SKYPE</strong>
+                        <span>marosliska</span>
+                    </li>
                 </ul>
+                <div id="map">
+
+                </div>
             </div>
 
         </div>
@@ -200,6 +207,19 @@
             }
         }
     </script>
+
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(48.15, 17.10),
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkKDVVXxk1LPqHXE0p3D4_I0ZVzGun9DE&callback=myMap"></script>
 
 </body>
 

@@ -34,7 +34,7 @@ body {
   background-color: black;
 }
 .topnav li a.active {
-  background-color: red;
+  background-color: #e8676b;
 }
 .topnav li.menu-icon {
   display: none;
@@ -158,6 +158,62 @@ section {
         flex: 100%;
         width: 100%;
     }*/
+}
+/* ZRUCNOSTI */
+#zrucnosti {
+  margin: 40px;
+}
+#zrucnosti .zrucnostikontainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 925px;
+  justify-content: center;
+  background-color: white;
+  padding: 0 10px;
+  padding-bottom: 35px;
+}
+#zrucnosti .zrucnostikontainer span {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+#zrucnosti .zrucnostikontainer .zruckod {
+  width: 300px;
+  flex-grow: 1;
+  margin: 0 15px;
+}
+#zrucnosti .zrucnostikontainer .zrucine {
+  width: 300px;
+  flex-grow: 1;
+  margin: 0 15px;
+}
+#zrucnosti .zrucnostikontainer .progressbar {
+  background-color: #e8676b26;
+  border-radius: 5px;
+}
+#zrucnosti .zrucnostikontainer .progressbar div {
+  background-color: #e8676b;
+  height: 5px;
+  border-radius: 3px;
+}
+#zrucnosti .zrucnostikontainer .progressbar .html {
+  width: 70%;
+}
+#zrucnosti .zrucnostikontainer .progressbar .css {
+  width: 70%;
+}
+#zrucnosti .zrucnostikontainer .progressbar .js {
+  width: 30%;
+}
+#zrucnosti .zrucnostikontainer .progressbar .spss {
+  width: 90%;
+}
+#zrucnosti .zrucnostikontainer .progressbar .word {
+  width: 80%;
+}
+#zrucnosti .zrucnostikontainer .progressbar .excel {
+  width: 80%;
 }
 /* TIMELINE */
 /* pravitko */

@@ -33,7 +33,7 @@ body {
                 background-color: black;
             }
             &.active {
-                background-color: red;
+                background-color: #e8676b;
             }
         }
         &.menu-icon {
@@ -182,6 +182,64 @@ section {
         flex: 100%;
         width: 100%;
     }*/
+}
+
+/* ZRUCNOSTI */
+
+#zrucnosti {
+    margin: 40px;
+    .zrucnostikontainer {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 925px;
+        justify-content: center;
+        background-color: white;
+        padding: 0 10px;
+        padding-bottom: 35px;
+        span {
+            display: block;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        .zruckod {
+            width: 300px;
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+        .zrucine {
+            width: 300px;
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+        .progressbar {
+            background-color: #e8676b26;
+            border-radius: 5px;
+            div {
+                background-color: #e8676b;
+                height: 5px;
+                border-radius: 3px;
+            }
+            .html {
+                width: 70%;
+            }
+            .css {
+                width: 70%;
+            }
+            .js {
+                width: 30%;
+            }
+            .spss {
+                width: 90%;
+            }
+            .word {
+                width: 80%;
+            }
+            .excel {
+                width: 80%;
+            }
+        }
+    }
 }
 
 

@@ -377,6 +377,28 @@ section {
 
 #portfolio {
     margin: 30px;
+    .header {
+        text-align: center;
+    }
+    .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+
+    }
+    .btnactive {
+            background-color: #e8676b;
+            color: white;
+        }
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -385,7 +407,7 @@ section {
         margin: auto;
         .column {
             flex: 25%;
-            max-width: 25%;
+
             padding: 0 4px;
             img {
                 margin-top: 8px;
@@ -394,21 +416,9 @@ section {
             }
         }
 
-        /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
 
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
+
+
     }
 }
 

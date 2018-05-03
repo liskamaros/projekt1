@@ -10,10 +10,11 @@ body {
 /* NAVIGACIA */
 .topnav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  border-bottom: 1px solid #d7d7d7;
+  margin-top: auto;
+  padding: 10px 0px;
   overflow: hidden;
-  background-color: darkslateblue;
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,18 +24,19 @@ body {
   float: left;
 }
 .topnav li a {
-  color: white;
+  color: black;
   display: block;
-  padding: 14px 16px;
+  padding: 8px 0px;
+  margin: 0px 14px;
   float: none;
   text-align: left;
   text-decoration: none;
 }
-.topnav li a:hover:not(.active) {
-  background-color: black;
+.topnav li a:hover:not(.navactive) {
+  border-bottom: 2px solid #e8676b;
 }
-.topnav li a.active {
-  background-color: #e8676b;
+.topnav li a.navactive {
+  border-bottom: 2px solid #e8676b;
 }
 .topnav li.menu-icon {
   display: none;
@@ -53,8 +55,9 @@ body {
   .menu-icon {
     display: block!important;
     position: absolute;
+    padding: 8px 0px;
     right: 0;
-    top: 0;
+    top: 3px;
   }
 }
 section {
@@ -100,10 +103,17 @@ section {
 }
 #predstavenie .socsiete .social li {
   display: inline-block;
-  margin: 5px 25px;
+  margin: 5px 15px;
 }
 #predstavenie .socsiete .social li .fa {
   color: white;
+  font-size: 20px;
+  line-height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+#predstavenie .socsiete .social li .fa:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #predstavenie .flexcontainer1 {
   display: flex;
@@ -226,12 +236,12 @@ section {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 5px;
   background-color: #e8676b26;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -2.5px;
   margin-top: 30px;
   margin-bottom: 170px;
 }
@@ -253,9 +263,9 @@ section {
   position: absolute;
   width: 5px;
   height: 5px;
-  right: -5.7px;
+  right: -4.7px;
   background-color: #e8676b;
-  border: 3px solid #e8676b;
+  border: 2px solid #e8676b;
   top: 29px;
   border-radius: 50%;
   z-index: 1;
@@ -295,7 +305,7 @@ section {
 }
 /* kruhy vpravo */
 .right::after {
-  left: -5.3px;
+  left: -4.3px;
 }
 /* Media queries */
 @media screen and (max-width: 600px) {
@@ -319,7 +329,7 @@ section {
   /* kruhy */
   .left::after,
   .right::after {
-    left: 9.5px;
+    left: 10.5px;
   }
   /* kontajnery z prava */
   .right {
@@ -338,16 +348,16 @@ section {
   border: none;
   outline: none;
   padding: 10px 16px;
-  background-color: #f1f1f1;
+  background-color: #EFEFEE;
   cursor: pointer;
   font-size: 18px;
+}
+#portfolio .btn:hover:not(.btnactive) {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #portfolio .btnactive {
   background-color: #e8676b;
   color: white;
-}
-#portfolio .btn:hover {
-  background-color: #ddd;
 }
 #portfolio .row {
   display: flex;
@@ -434,4 +444,53 @@ section {
   display: inline-block;
   width: auto;
   margin-bottom: 20px;
+}
+footer .socsiete {
+  display: flex;
+  margin: auto;
+  max-width: 925px;
+  line-height: 45px;
+  justify-content: center;
+  border: 0;
+}
+footer .socsiete .social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+footer .socsiete .social li {
+  display: inline-block;
+  margin: 25px 15px;
+  border-radius: 50%;
+}
+footer .socsiete .social .fa {
+  color: #d7d7d7;
+  font-size: 20px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+footer .socsiete .social .fa:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.btt {
+  display: block;
+  bottom: 5px;
+  right: 5px;
+  position: fixed;
+}
+.btt .fa {
+  color: #d7d7d7;
+  font-size: 35px;
+  line-height: 45px;
+  width: 45px;
+  text-align: center;
+  border-radius: 50%;
+}
+.btt .fa:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
 }

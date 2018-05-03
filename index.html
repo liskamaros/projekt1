@@ -11,11 +11,11 @@
 <body>
 
     <ul class="topnav" id="myTopnav">
-        <li><a class="active" href="#predstavenie">Predstavenie</a></li>
-        <li><a href="#zrucnosti" onclick="hideNav()">Zručnosti</a></li>
-        <li><a href="#skusenosti" onclick="hideNav()">Skúsenosti</a></li>
-        <li><a href="#portfolio" onclick="hideNav()">Portfólio</a></li>
-        <li><a href="#kontakt" onclick="hideNav()">Kontakt</a></li>
+        <li><a class="btnnav navactive" href="#predstavenie">Predstavenie</a></li>
+        <li><a class="btnnav" href="#zrucnosti" onclick="hideNav()">Zručnosti</a></li>
+        <li><a class="btnnav" href="#skusenosti" onclick="hideNav()">Skúsenosti</a></li>
+        <li><a class="btnnav" href="#portfolio" onclick="hideNav()">Portfólio</a></li>
+        <li><a class="btnnav" href="#kontakt" onclick="hideNav()">Kontakt</a></li>
         <li class="menu-icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="displayNav()">menu</a></li>
     </ul>
 
@@ -240,7 +240,40 @@
 
         </div>
     </section>
-
+    <footer>
+        <div class="socsiete">
+            <ul class="social">
+                <li>
+                    <a href="https://twitter.com/" target="_blank">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/" target="_blank">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/" target="_blank">
+                        <span class="fa fa-google-plus"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <a class="btt" href="#">
+        <span class="fa fa-arrow-circle-o-up"></span>
+        </a>
     <script>
         function displayNav() {
             var x = document.getElementById("myTopnav");
@@ -258,6 +291,16 @@
             } else {
                 x.className = "topnav";
             }
+        }
+
+        var header = document.getElementById("myTopnav");
+        var btns = header.getElementsByClassName("btnnav");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("navactive");
+                current[0].className = current[0].className.replace(" navactive", "");
+                this.className += " navactive";
+            });
         }
     </script>
 

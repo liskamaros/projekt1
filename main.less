@@ -12,10 +12,11 @@ body {
 
 .topnav {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    border-bottom: 1px solid #d7d7d7;
+    margin-top: auto;
+    padding: 10px 0px;
     overflow: hidden;
-    background-color: darkslateblue;
+    background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
@@ -23,24 +24,29 @@ body {
     li {
         float: left;
         a {
-            color: white;
+            color: black;
             display: block;
-            padding: 14px 16px;
+            padding: 8px 0px;
+
+            margin: 0px 14px;
             float: none;
             text-align: left;
             text-decoration: none;
-            &:hover:not(.active) {
-                background-color: black;
+            &:hover:not(.navactive) {
+                border-bottom: 2px solid #e8676b;
             }
-            &.active {
-                background-color: #e8676b;
+            &.navactive {
+                border-bottom: 2px solid #e8676b;
             }
         }
         &.menu-icon {
             display: none;
         }
     }
+
+
 }
+
 
 @media only screen and (max-width: 600px) {
     .topnav {
@@ -58,8 +64,9 @@ body {
     .menu-icon {
         display: block!important;
         position: absolute;
+        padding: 8px 0px;
         right: 0;
-        top: 0;
+        top: 3px;
     }
 }
 
@@ -110,9 +117,16 @@ section {
             text-align: center;
             li {
                 display: inline-block;
-                margin: 5px 25px;
+                margin: 5px 15px;
                 .fa {
                     color: white;
+                    font-size: 20px;
+                    line-height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
                 }
             }
         }
@@ -256,12 +270,12 @@ section {
     &::after {
         content: '';
         position: absolute;
-        width: 6px;
+        width: 5px;
         background-color: #e8676b26;
         top: 0;
         bottom: 0;
         left: 50%;
-        margin-left: -3px;
+        margin-left: -2.5px;
         margin-top: 30px;
         margin-bottom: 170px;
     }
@@ -284,9 +298,9 @@ section {
         position: absolute;
         width: 5px;
         height: 5px;
-        right: -5.7px;
+        right: -4.7px;
         background-color: #e8676b;
-        border: 3px solid #e8676b;
+        border: 2px solid #e8676b;
         top: 29px;
         border-radius: 50%;
         z-index: 1;
@@ -338,7 +352,7 @@ section {
 /* kruhy vpravo */
 
 .right::after {
-    left: -5.3px;
+    left: -4.3px;
 }
 
 /* Media queries */
@@ -364,7 +378,7 @@ section {
     /* kruhy */
     .left::after,
     .right::after {
-        left: 9.5px;
+        left: 10.5px;
     }
     /* kontajnery z prava */
     .right {
@@ -384,19 +398,20 @@ section {
         border: none;
         outline: none;
         padding: 10px 16px;
-        background-color: #f1f1f1;
+        background-color: #EFEFEE;
         cursor: pointer;
         font-size: 18px;
+        &:hover:not(.btnactive) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
 
     }
     .btnactive {
-            background-color: #e8676b;
-            color: white;
-        }
-
-    .btn:hover {
-        background-color: #ddd;
+        background-color: #e8676b;
+        color: white;
     }
+
+
 
 
     .row {
@@ -422,33 +437,22 @@ section {
     }
 }
 
-
-
-
-
-
-
 /* KONTAKT */
 
 #kontakt {
     margin: 30px;
-
     .kontaktcontainer {
         display: flex;
         flex-wrap: wrap;
-
         margin: auto;
         max-width: 945px;
         justify-content: space-between;
-
-
         .kformular {
             background-color: white;
             padding: 30px;
             width: 300px;
             flex-grow: 1;
             margin: 0 10px;
-
             h3 {
                 margin-top: auto;
             }
@@ -470,14 +474,12 @@ section {
                     padding-top: 15px;
                 }
                 .tsubmit {
-
                     .tlacitkosubmit {
                         background-color: #e8676b;
                         margin-top: 15px;
                         width: 150px;
                         padding: 15px;
                         color: white;
-
                     }
                 }
             }
@@ -510,6 +512,61 @@ section {
                     }
                 }
             }
+        }
+    }
+}
+
+footer {
+    .socsiete {
+        display: flex;
+        margin: auto;
+        max-width: 925px;
+        line-height: 45px;
+        justify-content: center;
+        border: 0;
+        .social {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                margin: 25px 15px;
+                border-radius: 50%;
+            }
+            .fa {
+                color: #d7d7d7;
+                font-size: 20px;
+                width: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+                vertical-align: middle;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    color: black;
+                }
+
+            }
+        }
+    }
+}
+
+
+.btt {
+    display: block;
+    bottom: 5px;
+    right: 5px;
+    position: fixed;
+    .fa {
+        color: #d7d7d7;
+        font-size: 35px;
+        line-height: 45px;
+        width: 45px;
+        text-align: center;
+        border-radius: 50%;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: black;
         }
     }
 }

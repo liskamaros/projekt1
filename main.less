@@ -43,10 +43,7 @@ body {
             display: none;
         }
     }
-
-
 }
-
 
 @media only screen and (max-width: 600px) {
     .topnav {
@@ -66,7 +63,8 @@ body {
         position: absolute;
         padding: 8px 0px;
         right: 0;
-        top: 3px;
+        top: 2px;
+        font-family: 'Montserrat', sans-serif;
     }
 }
 
@@ -102,6 +100,29 @@ section {
     margin: 40px;
     margin-top: -330px;
     position: relative;
+    .zivotopis {
+        max-width: 925px;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+        p {
+            line-height: 30px;
+            margin-top: 40px;
+        }
+        a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #d7d7d7;
+            padding: 15px 30px;
+            justify-content: center;
+            width: 250px;
+            margin: auto;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
     .socsiete {
         display: flex;
         margin: auto;
@@ -145,15 +166,13 @@ section {
         }
         .fotka {
             width: 300px;
-
         }
-
         .omne img {
             width: 100%;
             max-width: 350px;
         }
         .omne h4 {
-            border-bottom: solid black;
+            border-bottom: 0.5px solid black;
             padding-bottom: 30px;
             margin-bottom: 30px;
         }
@@ -164,7 +183,6 @@ section {
                 strong {
                     display: inline-block;
                     width: 150px;
-
                 }
                 span {
                     display: inline-block;
@@ -190,12 +208,7 @@ section {
         .omne ul li strong {
             margin-bottom: 0;
         }
-
     }
-    /*.omne {
-        flex: 100%;
-        width: 100%;
-    }*/
 }
 
 /* ZRUCNOSTI */
@@ -289,12 +302,11 @@ section {
         position: absolute;
         width: 5px;
         background-color: #e8676b26;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -2.5px;
+        height: 750px;
         margin-top: 30px;
-        margin-bottom: 170px;
+    }
+    .prvy {
+        margin-top: 10px;
     }
 }
 
@@ -306,18 +318,15 @@ section {
     background-color: inherit;
     width: 50%;
     /* kontajner vlavo */
-    .left {
-        left: 0;
-    }
     /* bodky */
     &::after {
         content: '';
         position: absolute;
         width: 5px;
         height: 5px;
-        right: -4.7px;
+        right: -6px;
         background-color: #e8676b;
-        border: 2px solid #e8676b;
+        border: 1px solid #e8676b;
         top: 29px;
         border-radius: 50%;
         z-index: 1;
@@ -327,6 +336,9 @@ section {
         padding: 20px 30px;
         background-color: white;
         position: relative;
+        h2 {
+            color: #e8676b;
+        }
         .okraj {
             height: 3px;
             background-color: #e8676b;
@@ -339,9 +351,12 @@ section {
 
 /* kontajner vpravo */
 
+.left {
+    float: left; // clear: left;
+}
+
 .right {
-    left: 50%;
-    margin-top: -190px;
+    float: right;
 }
 
 /* sipky */
@@ -376,15 +391,30 @@ section {
 /* kruhy vpravo */
 
 .right::after {
-    left: -4.3px;
+    left: -1px;
 }
 
 /* Media queries */
 
+@media screen and (max-width: 750px) {
+    /* timeline vlavo */
+    .timeline::after {
+        height: 890px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* timeline vlavo */
+    .timeline::after {
+        height: 990px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     /* timeline vlavo */
     .timeline::after {
-        left: 15px;
+        left: 10px;
+        height: 1300px;
     }
     /* sirka kontajnerov */
     .container {
@@ -402,18 +432,40 @@ section {
     /* kruhy */
     .left::after,
     .right::after {
-        left: 10.5px;
+        left: 9px;
     }
     /* kontajnery z prava */
-    .right {
+    .right.prvy {
         left: 0%;
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    /* timeline vlavo */
+    .timeline::after {
+        height: 1420px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* timeline vlavo */
+    .timeline::after {
+        height: 1540px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    /* timeline vlavo */
+    .timeline::after {
+        height: 1750px;
     }
 }
 
 /* PORTFOLIO */
 
 #portfolio {
+    clear: both;
     margin: 30px;
     padding-top: 60px;
     .portnadpis {
@@ -453,7 +505,6 @@ section {
         margin: auto;
         .column {
             flex: 25%;
-
             padding: 0 4px;
             img {
                 margin-top: 8px;
@@ -466,7 +517,7 @@ section {
 
 @media (max-width: 600px) {
     #portfolio {
-        margin: 10px;
+        margin: 0px;
     }
 }
 
@@ -504,6 +555,7 @@ section {
                     resize: none;
                     width: 100%;
                     font-size: 16px;
+                    font-family: 'Montserrat', sans-serif;
                 }
                 .input-field {
                     border-bottom: 1px solid black;
@@ -555,7 +607,7 @@ section {
 
 @media (max-width: 600px) {
     #kontakt {
-        margin: 10px;
+        margin: 0px;
     }
 }
 

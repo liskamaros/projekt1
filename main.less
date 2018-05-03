@@ -202,6 +202,10 @@ section {
 
 #zrucnosti {
     margin: 40px;
+    padding-top: 60px;
+    .zrucnadpis {
+        text-align: center;
+    }
     .zrucnostikontainer {
         display: flex;
         flex-wrap: wrap;
@@ -254,11 +258,24 @@ section {
             }
         }
     }
+
 }
 
-
+@media (max-width: 600px) {
+    #zrucnosti {
+        margin: 10px;
+    }
+}
 
 /* TIMELINE */
+
+#skusenosti {
+    padding-top: 60px;
+
+    .skusnadpis {
+        text-align: center;
+    }
+}
 
 /* pravitko */
 
@@ -391,8 +408,15 @@ section {
 
 #portfolio {
     margin: 30px;
+    padding-top: 60px;
+    .portnadpis {
+        text-align: center;
+    }
     .header {
         text-align: center;
+        strong {
+            margin: 0 5px;
+        }
     }
     .btn {
         border: none;
@@ -430,10 +454,12 @@ section {
                 width: 100%;
             }
         }
+    }
+}
 
-
-
-
+@media (max-width: 600px) {
+    #portfolio {
+        margin: 10px;
     }
 }
 
@@ -441,6 +467,10 @@ section {
 
 #kontakt {
     margin: 30px;
+    padding-top: 60px;
+    .kontnadpis {
+        text-align: center;
+    }
     .kontaktcontainer {
         display: flex;
         flex-wrap: wrap;
@@ -515,6 +545,14 @@ section {
         }
     }
 }
+
+@media (max-width: 600px) {
+    #kontakt {
+        margin: 10px;
+    }
+}
+
+/* FOOTER */
 
 footer {
     .socsiete {

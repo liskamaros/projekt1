@@ -172,6 +172,10 @@ section {
 /* ZRUCNOSTI */
 #zrucnosti {
   margin: 40px;
+  padding-top: 60px;
+}
+#zrucnosti .zrucnadpis {
+  text-align: center;
 }
 #zrucnosti .zrucnostikontainer {
   display: flex;
@@ -225,7 +229,18 @@ section {
 #zrucnosti .zrucnostikontainer .progressbar .excel {
   width: 80%;
 }
+@media (max-width: 600px) {
+  #zrucnosti {
+    margin: 10px;
+  }
+}
 /* TIMELINE */
+#skusenosti {
+  padding-top: 60px;
+}
+#skusenosti .skusnadpis {
+  text-align: center;
+}
 /* pravitko */
 .timeline {
   position: relative;
@@ -340,9 +355,16 @@ section {
 /* PORTFOLIO */
 #portfolio {
   margin: 30px;
+  padding-top: 60px;
+}
+#portfolio .portnadpis {
+  text-align: center;
 }
 #portfolio .header {
   text-align: center;
+}
+#portfolio .header strong {
+  margin: 0 5px;
 }
 #portfolio .btn {
   border: none;
@@ -375,9 +397,18 @@ section {
   vertical-align: middle;
   width: 100%;
 }
+@media (max-width: 600px) {
+  #portfolio {
+    margin: 10px;
+  }
+}
 /* KONTAKT */
 #kontakt {
   margin: 30px;
+  padding-top: 60px;
+}
+#kontakt .kontnadpis {
+  text-align: center;
 }
 #kontakt .kontaktcontainer {
   display: flex;
@@ -445,6 +476,12 @@ section {
   width: auto;
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  #kontakt {
+    margin: 10px;
+  }
+}
+/* FOOTER */
 footer .socsiete {
   display: flex;
   margin: auto;

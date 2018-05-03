@@ -290,6 +290,13 @@ section {
   background-color: white;
   position: relative;
 }
+.container .content .okraj {
+  height: 3px;
+  background-color: #e8676b;
+  margin-top: -20px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
 /* kontajner vpravo */
 .right {
   left: 50%;
